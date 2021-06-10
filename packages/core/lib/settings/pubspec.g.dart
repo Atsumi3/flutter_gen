@@ -88,6 +88,7 @@ FlutterGenColors _$FlutterGenColorsFromJson(Map json) {
       enabled: $checkedConvert(json, 'enabled', (v) => v as bool),
       inputs: $checkedConvert(json, 'inputs',
           (v) => (v as List<dynamic>).map((e) => e as String).toList()),
+      className: $checkedConvert(json, 'class_name', (v) => v as String)
     );
     return val;
   });
