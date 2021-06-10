@@ -83,14 +83,15 @@ FlutterGen _$FlutterGenFromJson(Map json) {
 
 FlutterGenColors _$FlutterGenColorsFromJson(Map json) {
   return $checkedNew('FlutterGenColors', json, () {
-    $checkKeys(json, requiredKeys: const ['enabled', 'inputs']);
+    $checkKeys(json, requiredKeys: const ['enabled', 'inputs', 'class_name']);
     final val = FlutterGenColors(
       enabled: $checkedConvert(json, 'enabled', (v) => v as bool),
       inputs: $checkedConvert(json, 'inputs',
           (v) => (v as List<dynamic>).map((e) => e as String).toList()),
+      className: $checkedConvert(json, 'class_name', (v) => v as String),
     );
     return val;
-  });
+  }, fieldKeyMap: const {'className': 'class_name'});
 }
 
 FlutterGenAssets _$FlutterGenAssetsFromJson(Map json) {

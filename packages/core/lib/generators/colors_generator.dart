@@ -22,13 +22,16 @@ String generateColors(
         'The value of "flutter_gen/colors:" is incorrect.');
   }
 
+  final colorsClassName =
+    colors.className.isNotEmpty ? colors.className : 'ColorName';
+
   final buffer = StringBuffer();
   buffer.writeln(header);
   buffer.writeln("import 'package:flutter/painting.dart';");
   buffer.writeln("import 'package:flutter/material.dart';");
   buffer.writeln();
-  buffer.writeln('class ColorName {');
-  buffer.writeln('  ColorName._();');
+  buffer.writeln('class $colorsClassName {');
+  buffer.writeln('  $colorsClassName._();');
   buffer.writeln();
 
   final colorList = <_Color>[];
