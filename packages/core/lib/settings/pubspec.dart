@@ -109,13 +109,17 @@ class FlutterGen {
 
 @JsonSerializable()
 class FlutterGenColors {
-  FlutterGenColors({required this.enabled, required this.inputs});
+  FlutterGenColors(
+      {required this.enabled, required this.inputs, required this.className});
 
   @JsonKey(name: 'enabled', required: true)
   final bool enabled;
 
   @JsonKey(name: 'inputs', required: true)
   final List<String> inputs;
+
+  @JsonKey(name: 'class_name', required: true)
+  final String className;
 
   factory FlutterGenColors.fromJson(Map json) =>
       _$FlutterGenColorsFromJson(json);
