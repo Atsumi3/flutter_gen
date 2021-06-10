@@ -23,8 +23,9 @@ String generateColors(
   }
 
   final colorsClassName;
+  print(colors.className);
   if(colors.className.isEmpty) {
-    colorsClassName = 'ColorName';
+    colorsClassName = 'ColorName2';
   } else {
     colorsClassName = colors.className;
   }
